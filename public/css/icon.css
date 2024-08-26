@@ -1,0 +1,45 @@
+.custom-marker {
+    position: relative; /* Required for pseudo-element positioning */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px; /* Adjust as needed */
+    color: white; /* Icon color */
+    width: 30px;
+    height: 30px;
+    border-radius: 50%; /* Make the marker round */
+    background-color: #FF5A5F; /* Background color */
+    cursor: pointer; /* Pointer cursor */
+    transition: background-color 0.3s; /* Smooth transition for background color */
+}
+
+.custom-marker i {
+    margin: 0; /* Ensure no extra margin */
+    transition: opacity 0.3s; /* Smooth transition for icon opacity */
+}
+
+.custom-marker:hover {
+    background-color: #FF8C8C; /* Change background color on hover */
+}
+
+.custom-marker.hover-icon i {
+    opacity: 0; /* Hide the original house icon smoothly */
+}
+
+.custom-marker.hover-icon::before {
+    content: "\f834"; /* FontAwesome Unicode for Airbnb icon */
+    font-family: "Font Awesome 6 Brands"; /* Ensure FontAwesome is applied */
+    font-weight: 900; /* Use the brand icon weight */
+    font-size: 20px; /* Adjust size as needed */
+    color: white; /* Icon color */
+    position: absolute; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); /* Center the icon */
+    transition: font-size 0.3s, opacity 0.3s; /* Smooth transition for icon size and visibility */
+    opacity: 0; /* Initially hidden */
+}
+
+.custom-marker:hover.hover-icon::before {
+    opacity: 1; /* Show the Airbnb icon smoothly */
+}

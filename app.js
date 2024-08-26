@@ -50,9 +50,9 @@ const sessionOptions = {
 };
 
 // Root Route
-app.get("/", (req, res) => {
-    res.send("Root Working");
-})
+// app.get("/", (req, res) => {
+//     res.send("Root Working");
+// })
 
 
 // Middlewares

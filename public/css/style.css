@@ -1,6 +1,6 @@
 body{
     font-family: "Plus Jakarta Sans", sans-serif !important;
-    /* font-weight: 500 !important; */
+    font-weight: 500 !important;
     display: flex;
     flex-direction: column;
     height: 100vh;
